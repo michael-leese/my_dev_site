@@ -43,3 +43,6 @@ next-env.d.ts
 # git metadata (separate git dir workaround)
 .git
 .gitdir/
+
+# Internal docs
+.internal_docs/

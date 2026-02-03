@@ -1,43 +1,73 @@
-# Michael Leese — Developer Portfolio
+# Michael Leese — Developer Portfolio (my_dev_site)
 
-Neo-minimal personal site that balances calm presentation with technical depth. Built in Next.js with TypeScript and Tailwind, designed for maintainability, clarity, and gentle interaction.
+Neo-minimal personal site that balances calm presentation with technical depth. Built in Next.js (App Router) with TypeScript and Tailwind, designed for maintainability, clarity, and gentle interaction.
+
+## What this site is for
+- **Recruiters / hiring teams:** scan experience quickly, validate credibility
+- **Technical reviewers:** drill into project detail and stack decisions
+- **Freelance clients:** understand how I work and how to contact me
 
 ## Features
-- Subtle theme toggle (light/dark).
-- Filterable skill inventory for quick scanning.
-- Project detail drawer with on-demand context.
-- Clean, readable sections tailored for hiring teams and technical reviewers.
+- Subtle theme toggle (light/dark) with persisted preference
+- Filterable skills for quick scanning
+- Project detail drawer for on-demand context (role, outcomes, tech, links)
+- Content-driven architecture (data + types separate from UI)
 
 ## Stack
 - Next.js (App Router)
 - TypeScript
-- Tailwind CSS
 - React
+- Tailwind CSS
 
 ## Project Structure
-- `src/app`: Routes, layout, global styling
-- `src/components`: Reusable UI components
-- `src/data`: Content and structured data
-- `src/types`: Shared type definitions
-- `docs/brand-system.md`: Design tokens and brand guidelines
+- `src/app` — routes, layouts, global styling
+- `src/components` — reusable UI components
+- `src/data` — content and structured data (projects, skills, links)
+- `src/types` — shared type definitions
+- `docs/` — internal notes (brand system, tokens, content rules)
 
-## Conventions
-- All components are typed and documented with concise TSDoc.
-- Data is kept in `src/data` with explicit types in `src/types`.
-- UI uses design tokens from `src/app/globals.css` for consistency.
-- Small, purpose-built components instead of one massive page file.
-
-## Scripts
+## Local Development
+### Install
 ```bash
-npm run dev
-npm run build
-npm run start
-npm run lint
+npm ci
 ```
 
-## Deployment
-- Recommended: Vercel
-- Alternative: Cloudflare Pages
+### Run
+```bash
+npm run dev
+```
 
-## Notes
-The site is designed to scale into case studies and deeper technical write-ups without disrupting the clean public-facing view.
+### Quality checks (run before committing)
+```bash
+npm run lint
+npm run build
+```
+
+> Recommended: add a typecheck script:
+```bash
+# package.json
+# "typecheck": "tsc --noEmit"
+```
+
+## Links strategy (important)
+- Global GitHub icon should point to: `https://github.com/michael-leese`
+- Each project should optionally include:
+  - **Live demo URL** (if deployed)
+  - **Repo URL** (if public)
+  - For private/commercial work: mark as **Code private** and omit repo link
+
+## Deployment
+Recommended:
+- **Vercel** (best Next.js support)
+
+Alternative:
+- Cloudflare Pages (good, more control)
+
+## Troubleshooting
+### Theme init / hydration errors
+If you see console errors about `<script>` inside `<html>`, ensure any theme-init script is rendered inside `<head>` (or migrate to `next-themes`).
+
+## Roadmap (lightweight)
+- Add case study pages (1–2 professional, 1–2 personal)
+- Add contact form (server action or provider)
+- Add analytics (privacy-friendly)
