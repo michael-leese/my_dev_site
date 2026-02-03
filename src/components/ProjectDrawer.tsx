@@ -17,7 +17,7 @@ const formatStack = (stack: string[]): string => stack.join(" · ");
 /**
  * Project grid with an accessible slide-over drawer.
  */
-export function ProjectDrawer({ projects }: ProjectDrawerProps) {
+export function ProjectDrawer({ projects }: ProjectDrawerProps): JSX.Element {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   const activeStack: string = useMemo(() => {

@@ -33,7 +33,7 @@ const applyTheme = (theme: Theme): void => {
 /**
  * Subtle theme toggle with minimal visual weight.
  */
-export function ThemeToggle() {
+export function ThemeToggle(): JSX.Element {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {

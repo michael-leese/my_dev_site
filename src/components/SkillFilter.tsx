@@ -34,7 +34,7 @@ const filterSkills = (skills: Skill[], filter: SkillFilter): Skill[] => {
 /**
  * Interactive skill filter with minimal footprint.
  */
-export function SkillFilter({ skills }: SkillFilterProps) {
+export function SkillFilter({ skills }: SkillFilterProps): JSX.Element {
   const [activeFilter, setActiveFilter] = useState<SkillFilter>("All");
 
   const visibleSkills: Skill[] = useMemo(
