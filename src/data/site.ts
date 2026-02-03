@@ -29,7 +29,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "GitHub",
-    href: "https://michael-leese.github.io",
+    href: "https://github.com/michael-leese",
   },
   {
     label: "LinkedIn",
@@ -271,7 +271,7 @@ export const projects: Project[] = [
     name: "Galactic Gunners",
     summary: "A browser-based Space Invaders-style game.",
     stack: ["JavaScript", "Phaser 3"],
-    link: "https://michael-leese.github.io/GallacticGunners/",
+    liveUrl: "https://michael-leese.github.io/GallacticGunners/",
     details: [
       "Delivered a retro-inspired game with responsive input controls.",
       "Optimised animation loops for smooth gameplay.",

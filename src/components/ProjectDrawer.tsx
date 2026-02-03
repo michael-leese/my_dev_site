@@ -79,14 +79,14 @@ export function ProjectDrawer({ projects }: ProjectDrawerProps): JSX.Element {
               >
                 View details
               </button>
-              {project.link ? (
+              {project.liveUrl ? (
                 <a
                   className="button button-primary"
-                  href={project.link}
+                  href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit
+                  Live
                 </a>
               ) : null}
             </div>
@@ -130,9 +130,31 @@ export function ProjectDrawer({ projects }: ProjectDrawerProps): JSX.Element {
                   <li key={detail}>• {detail}</li>
                 ))}
               </ul>
-              {activeProject.isPrivate ? (
-                <p className="tag w-fit text-xs">Commercial codebase</p>
-              ) : null}
+              <div className="flex flex-wrap gap-3">
+                {activeProject.repoUrl ? (
+                  <a
+                    className="button"
+                    href={activeProject.repoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>
+                ) : null}
+                {activeProject.liveUrl ? (
+                  <a
+                    className="button button-primary"
+                    href={activeProject.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live
+                  </a>
+                ) : null}
+                {activeProject.isPrivate ? (
+                  <span className="tag w-fit text-xs">Code private</span>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>

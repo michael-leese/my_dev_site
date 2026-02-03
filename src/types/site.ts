@@ -36,8 +36,10 @@ export type Project = {
   summary: string;
   /** Technologies used. */
   stack: string[];
-  /** Optional link to live site or repo. */
-  link?: string;
+  /** Optional link to a live deployment. */
+  liveUrl?: string;
+  /** Optional link to a public repository. */
+  repoUrl?: string;
   /** Extra context shown in the detail drawer. */
   details: string[];
   /** Whether the code is private. */
