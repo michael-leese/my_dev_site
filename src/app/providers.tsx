@@ -12,7 +12,7 @@ export function Providers({ children }: ProvidersProps): JSX.Element {
   return (
     <ThemeProvider
       attribute="data-theme"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableSystem
       disableTransitionOnChange
     >
