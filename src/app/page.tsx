@@ -22,10 +22,22 @@ export default function Home(): JSX.Element {
     "Calm leadership and reliable execution for teams and clients.",
   ];
 
+  const tocLinks: { label: string; href: string }[] = [
+    { label: "Overview", href: "#overview" },
+    { label: "Stack", href: "#stack" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <div className="page">
       <main className="container flex flex-col gap-10">
-        <header className="flex flex-wrap items-start justify-between gap-6">
+        <header
+          id="overview"
+          className="flex flex-wrap items-start justify-between gap-6"
+        >
           <div className="flex flex-col gap-4">
             <span className="pill w-fit">Available for freelance & contracts</span>
             <h1 className="headline">
@@ -55,6 +67,24 @@ export default function Home(): JSX.Element {
           <ThemeToggle />
         </header>
 
+        <nav className="sticky top-6 z-10 rounded-full border border-[color:var(--line)] bg-[color:var(--surface)]/90 px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.08)] backdrop-blur">
+          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.24em] text-[color:var(--text-muted)]">
+            <span className="hidden sm:inline">Contents</span>
+            <span className="hidden sm:inline">·</span>
+            <div className="flex flex-wrap items-center gap-3 text-[0.7rem] font-semibold">
+              {tocLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full px-3 py-1 transition hover:text-[color:var(--accent-strong)]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </nav>
+
         <section className="card grid-two">
           <div className="flex flex-col gap-4">
             <span className="eyebrow">How I Work</span>
@@ -73,7 +103,7 @@ export default function Home(): JSX.Element {
           </ul>
         </section>
 
-        <section className="section">
+        <section id="stack" className="section">
           <SectionHeader
             eyebrow="Stack Overview"
             title="Built for clarity and longevity."
@@ -98,7 +128,7 @@ export default function Home(): JSX.Element {
           </div>
         </section>
 
-        <section className="section">
+        <section id="experience" className="section">
           <SectionHeader
             eyebrow="Experience"
             title="Proven delivery across product, consulting, and community."
@@ -126,7 +156,7 @@ export default function Home(): JSX.Element {
           </ol>
         </section>
 
-        <section className="section">
+        <section id="projects" className="section">
           <SectionHeader
             eyebrow="Projects"
             title="Selected work with detail on demand."
@@ -137,7 +167,7 @@ export default function Home(): JSX.Element {
           </div>
         </section>
 
-        <section className="section">
+        <section id="skills" className="section">
           <SectionHeader
             eyebrow="Skills"
             title="Specialist depth with practical range."
@@ -148,7 +178,7 @@ export default function Home(): JSX.Element {
           </div>
         </section>
 
-        <section className="section card">
+        <section id="contact" className="section card">
           <SectionHeader
             eyebrow="Contact"
             title="Let’s build something measured and durable."
