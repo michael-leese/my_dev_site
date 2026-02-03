@@ -3,9 +3,9 @@
 Neo-minimal personal site that balances calm presentation with technical depth. Built in Next.js (App Router) with TypeScript and Tailwind, designed for maintainability, clarity, and gentle interaction.
 
 ## What this site is for
-- **Recruiters / hiring teams:** scan experience quickly, validate credibility
-- **Technical reviewers:** drill into project detail and stack decisions
-- **Freelance clients:** understand how I work and how to contact me
+- Recruiters and hiring teams: scan experience quickly, validate credibility
+- Technical reviewers: drill into project detail and stack decisions
+- Freelance clients: understand how I work and how to contact me
 
 ## Features
 - Subtle theme toggle (light/dark) with persisted preference
@@ -41,6 +41,7 @@ npm run dev
 ```bash
 npm run lint
 npm run build
+npm run start
 ```
 
 > Recommended: add a typecheck script:
@@ -52,20 +53,26 @@ npm run build
 ## Links strategy (important)
 - Global GitHub icon should point to: `https://github.com/michael-leese`
 - Each project should optionally include:
-  - **Live demo URL** (if deployed)
-  - **Repo URL** (if public)
-  - For private/commercial work: mark as **Code private** and omit repo link
+  - Live demo URL (if deployed)
+  - Repo URL (if public)
+  - For private/commercial work: mark as Code private and omit repo link
 
 ## Deployment
 Recommended:
-- **Vercel** (best Next.js support)
+- Vercel (best Next.js support)
 
 Alternative:
 - Cloudflare Pages (good, more control)
 
 ## Troubleshooting
 ### Theme init / hydration errors
-If you see console errors about `<script>` inside `<html>`, ensure any theme-init script is rendered inside `<head>` (or migrate to `next-themes`).
+This project uses `next-themes`. If you see theme or hydration warnings, confirm `ThemeProvider` is configured in `src/app/providers.tsx`.
+
+### Port reset on localhost
+If `localhost:3000` resets in your browser, try:
+```bash
+npm run dev -- --port 3001
+```
 
 ## Roadmap (lightweight)
 - Add case study pages (1–2 professional, 1–2 personal)
