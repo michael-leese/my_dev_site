@@ -1,5 +1,7 @@
 # Michael Leese — Developer Portfolio (my_dev_site)
 
+[View here...](www.michael-leese.dev)
+
 Neo-minimal personal site that balances calm presentation with technical depth. Built in Next.js (App Router) with TypeScript and Tailwind, designed for maintainability, clarity, and gentle interaction.
 
 ## What this site is for
