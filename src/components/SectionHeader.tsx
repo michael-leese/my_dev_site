@@ -17,7 +17,7 @@ export function SectionHeader({
   title,
   subtitle,
   align = "left",
-}: SectionHeaderProps): JSX.Element {
+}: SectionHeaderProps) {
   const alignmentClass: string =
     align === "center" ? "text-center items-center" : "text-left items-start";
 

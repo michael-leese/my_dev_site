@@ -15,7 +15,7 @@ import type { ExperienceEntry, StackGroup } from "@/types/site";
 /**
  * Primary landing page for the portfolio.
  */
-export default function Home(): JSX.Element {
+export default function Home() {
   const summaryPoints: string[] = [
     "Neo-minimal interface, technical depth on demand.",
     "Clear, maintainable code with pragmatic delivery.",

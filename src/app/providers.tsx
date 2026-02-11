@@ -8,7 +8,7 @@ type ProvidersProps = PropsWithChildren;
 /**
  * App-level providers for client-side concerns (theme, future context, etc).
  */
-export function Providers({ children }: ProvidersProps): JSX.Element {
+export function Providers({ children }: ProvidersProps) {
   return (
     <ThemeProvider
       attribute="data-theme"

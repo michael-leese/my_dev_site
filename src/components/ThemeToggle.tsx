@@ -8,7 +8,7 @@ type Theme = "light" | "dark";
 /**
  * Subtle theme toggle with minimal visual weight.
  */
-export function ThemeToggle(): JSX.Element {
+export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
 
