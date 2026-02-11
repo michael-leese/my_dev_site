@@ -52,7 +52,9 @@ export type SkillCategory =
   | "Platform"
   | "Cloud"
   | "Data"
-  | "Tooling";
+  | "Tooling"
+  | "Governance"
+  | "AI & Context";
 
 export type Skill = {
   /** Skill or technology name. */

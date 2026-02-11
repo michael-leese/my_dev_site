@@ -11,13 +11,14 @@ export const profile: {
   summary: string;
 } = {
   name: "Michael Leese",
-  role: "Full Stack Developer",
+  role: "Full Stack Developer (Delivery + Platform Engineering)",
   location: "Sicily, Europe (GMT+1)",
   introduction:
-    "I’m a full-stack developer with hands-on experience delivering real projects.",
+    "I’m a hands-on full-stack developer with a practical focus on shipping reliable software.",
   summary:
-    "I work across the stack, value maintainable code, and enjoy turning ideas into working applications.",
+    "Alongside building features, I help teams improve delivery discipline—reproducible builds, clear documentation, and governance-first practices—so releases are easier to trust in regulated environments.",
 };
+
 
 /**
  * Social and contact links displayed in the footer.
@@ -57,12 +58,78 @@ export const stackGroups: StackGroup[] = [
     description: "Cloud, deployment, and developer tooling for reliable releases.",
     items: ["Supabase", "AWS (Cloud Practitioner)", "Git", "Postman"],
   },
+  {
+  title: "Governance & Delivery",
+  description:
+    "Evidence-led delivery, deterministic builds, and release discipline for regulated environments.",
+  items: [
+    "Deterministic builds / reproducibility",
+    "Evidence artifacts (ADRs, release notes, traceability)",
+    "Test governance (charters, ratification)",
+    "Multi-repo orchestration",
+    "Git (clean history, tags, change control)",
+    "CMake / Ninja (native toolchains)",
+  ],
+},
 ];
 
 /**
  * Professional experience timeline.
  */
 export const experience: ExperienceEntry[] = [
+  {
+  company: "ConclaveAI",
+  role: "Product & Platform Lead",
+  location: "UK (Remote)",
+  dates: "Feb 2026 — Present",
+  highlights: [
+    {
+      detail:
+        "Product & Platform Lead for ConclaveAI, a context-first AI application platform.",
+    },
+    {
+      detail:
+        "Defining the context/memory architecture to support traceability, auditability, and reliable system behaviour.",
+    },
+    {
+      detail:
+        "Leading data modelling and schema evolution (Postgres + migrations) to keep rapid delivery maintainable.",
+    },
+    {
+      detail:
+        "Driving platform standards across architecture, implementation patterns, and documentation for fast, safe iteration.",
+    },
+    {
+      detail:
+        "Lead Architect / Principal Engineer — AI Platform & Context/Data Architecture.",
+    },
+  ],
+},
+{
+  company: "Kompr-s",
+  role: "Delivery Lead / Solution Architect (Governance-First) + Platform Engineering Lead",
+  location: "Europe (Remote)",
+  dates: "2025 — Present",
+  highlights: [
+    {
+      detail:
+        "Leading governance-first delivery across engineering and testing, with an emphasis on reproducibility and audit-ready outputs.",
+    },
+    {
+      detail:
+        "Bridging architecture, release discipline, and platform engineering to keep delivery consistent across multiple repos and toolchains.",
+    },
+    {
+      detail:
+        "Driving deterministic build practices and dependency control to support reliable, repeatable releases.",
+    },
+    {
+      detail:
+        "Producing clear evidence artifacts (documentation, decisions, test governance) to support compliance and stakeholder assurance.",
+    },
+  ],
+},
+
   {
     company: "SecureGRC Pro",
     role: "Freelance Full Stack Developer",
@@ -219,6 +286,47 @@ export const experience: ExperienceEntry[] = [
  */
 export const projects: Project[] = [
   {
+  name: "ConclaveAI",
+  summary:
+    "A context-first AI platform focused on durable, auditable interactions and programmable context/state.",
+  stack: [
+    "Next.js 14",
+    "TypeScript",
+    "Tailwind CSS",
+    "Python",
+    "Django",
+    "Django REST Framework",
+    "Postgres",
+    "Supabase",
+    "OpenAI APIs",
+  ],
+  details: [
+    "Designed a structured context layer for traceable AI interactions and repeatable decisioning.",
+    "Owned the data model and migration strategy to support rapid development without schema drift.",
+    "Defined platform patterns for context retrieval, persistence, and audit-friendly run histories.",
+    "Commercial project with private codebase.",
+  ],
+  isPrivate: true,
+},
+{
+  name: "Kompr-s",
+  summary:
+    "A governance-first platform initiative focused on deterministic delivery and audit-ready evidence.",
+  stack: [
+    "TypeScript",
+    "Python",
+    "Git",
+    "CMake / Ninja",
+    "CI/CD (vendor-agnostic)",
+  ],
+  details: [
+    "Focused on reproducible builds, traceability, and evidence-led delivery practices.",
+    "Aligned release discipline across multiple repos and engineering workflows.",
+    "Private project with restricted details (NDA).",
+  ],
+  isPrivate: true,
+},
+  {
     name: "SecureGRC Pro",
     summary:
       "A modular Governance, Risk & Compliance platform for an Australian consultancy.",
@@ -295,7 +403,27 @@ export const skills: Skill[] = [
   { name: "REST APIs / JSON", category: "Backend" },
   { name: "Supabase", category: "Platform" },
   { name: "AWS (Cloud Practitioner)", category: "Cloud" },
-  { name: "OpenAI (enterprise pilot)", category: "Data" },
+  { name: "OpenAI (enterprise pilot)", category: "AI & Context" },
   { name: "Git", category: "Tooling" },
   { name: "Postman", category: "Tooling" },
+  // Additions for ConclaveAI (new category: "AI & Context")
+{ name: "LLM Orchestration", category: "AI & Context" },
+{ name: "Context Architecture", category: "AI & Context" },
+{ name: "Structured Memory Design", category: "AI & Context" },
+{ name: "Retrieval Design (RAG patterns)", category: "AI & Context" },
+{ name: "Prompt Engineering", category: "AI & Context" },
+{ name: "Traceability & Audit Trails", category: "AI & Context" },
+
+// Platform / Data additions (use existing or add category if you prefer)
+{ name: "PostgreSQL", category: "Data" },
+{ name: "Database Migrations", category: "Data" },
+{ name: "Data Modelling", category: "Data" },
+
+// Governance / Assurance (new tab)
+  { name: "Deterministic builds / reproducibility", category: "Governance" },
+  { name: "Release discipline & change control", category: "Governance" },
+  { name: "Audit-ready evidence artifacts", category: "Governance" },
+  { name: "Test governance (charters, ratification)", category: "Governance" },
+  { name: "Traceability & documentation discipline", category: "Governance" },
+
 ];

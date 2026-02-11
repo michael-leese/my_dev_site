@@ -20,6 +20,10 @@ export default function Home() {
     "Neo-minimal interface, technical depth on demand.",
     "Clear, maintainable code with pragmatic delivery.",
     "Calm leadership and reliable execution for teams and clients.",
+    "Evidence-driven delivery: decisions produce artifacts (ADRs, test charters, release notes) that stand up to audit.",
+    "Determinism over drama: reproducible builds, pinned dependencies, documented toolchains, predictable releases.",
+    "Cross-team orchestration: align dev/test/legal/IP so governance isn’t a bolt-on—it’s the workflow.",
+    "Systems thinking for AI products: context design, audit trails, and clean interfaces that scale with complexity.",
   ];
 
   const tocLinks: { label: string; href: string }[] = [
@@ -93,7 +97,14 @@ export default function Home() {
             </h2>
             <p className="text-sm text-[color:var(--text-muted)]">
               I focus on calm execution, strong documentation, and clean handoffs.
-              Every feature is built with the next maintainer in mind.
+              Every feature is built with the next maintainer in mind. 
+              <br />I work across the stack and across teams, bridging build systems, test strategy, and 
+              delivery so regulated environments can ship with confidence.
+            </p>
+            <p>For regulated or high-stakes teams, I treat documentation, test governance, 
+               and traceability as part of engineering—so the product is not only built, but <strong>defensible</strong>.
+               <br />I build governance-first software where auditability, determinism, and 
+               evidence are part of the engineering—not an afterthought.
             </p>
           </div>
           <ul className="flex flex-col gap-3 text-sm text-[color:var(--text-muted)]">

@@ -24,12 +24,23 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Michael Leese | Full Stack Developer",
+    default: "Michael Leese | Full Stack Developer & Governance-Focused Delivery",
     template: "%s | Michael Leese",
   },
   description:
-    "Full-stack developer delivering maintainable, production-ready web applications with a focus on clarity, reliability, and craft.",
+    "Full-stack developer focused on governance-first delivery, reproducible builds, and reliable software systems. I build maintainable, production-ready applications with an emphasis on clarity, traceability, and release discipline.",
   applicationName: "Michael Leese Portfolio",
+  keywords: [
+    "Michael Leese",
+    "Full Stack Developer",
+    "Governance-first delivery",
+    "Platform Engineering",
+    "Deterministic builds",
+    "Audit-ready systems",
+    "Next.js",
+    "TypeScript",
+    "Python",
+  ],
 };
 
 export default function RootLayout({
