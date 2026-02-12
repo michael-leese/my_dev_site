@@ -3,22 +3,22 @@ import type { ExperienceEntry, Project, Skill, SocialLink, StackGroup } from "@/
 /**
  * Core profile data shown in the hero section.
  */
-export const profile: {
-  name: string;
-  role: string;
-  location: string;
-  introduction: string;
-  summary: string;
-} = {
+export const profile = {
   name: "Michael Leese",
-  role: "Full Stack Developer (Delivery + Platform Engineering)",
+  role: "Full Stack Developer",
+  specialty: "Delivery + Platform Engineering",
   location: "Sicily, Europe (GMT+1)",
   introduction:
     "I’m a hands-on full-stack developer with a practical focus on shipping reliable software.",
-  summary:
-    "Alongside building features, I help teams improve delivery discipline—reproducible builds, clear documentation, and governance-first practices—so releases are easier to trust in regulated environments.",
+  summaryLead: "Alongside building features, I help teams improve",
+  summaryItems: [
+    "delivery discipline",
+    "reproducible builds",
+    "clear documentation",
+    "governance-first practices",
+  ],
+  summaryTail: "so releases are easier to trust in regulated environments.",
 };
-
 
 /**
  * Social and contact links displayed in the footer.

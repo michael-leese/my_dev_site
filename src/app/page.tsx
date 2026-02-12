@@ -44,16 +44,39 @@ export default function Home() {
         >
           <div className="flex flex-col gap-4">
             <span className="pill w-fit">Available for freelance & contracts</span>
-            <h1 className="headline">
-              {profile.name} · {profile.role}
-            </h1>
+
+            {/* Clean hierarchy: name → role → specialty */}
+            <div className="space-y-2">
+              <h1 className="headline">{profile.name}</h1>
+
+              <div className="flex flex-col gap-1">
+                <p className="text-lg md:text-xl font-medium text-[color:var(--text-base)]">
+                  {profile.role}
+                </p>
+                <p className="text-xs md:text-sm uppercase tracking-wide text-[color:var(--text-muted)]">
+                  {profile.specialty}
+                </p>
+              </div>
+            </div>
+
             <p className="subhead">{profile.introduction}</p>
-            <p className="subhead">{profile.summary}</p>
+
+            {/* Soft separators version (no bullets) */}
+            <p className="subhead max-w-[62ch]">
+              <span className="text-[color:var(--text-muted)]">{profile.summaryLead}</span>{" "}
+              <span className="font-medium text-[color:var(--text-base)]">
+                {profile.summaryItems.join(" · ")}
+              </span>
+              {" "}
+              <span className="text-[color:var(--text-muted)]">{profile.summaryTail}</span>
+            </p>
+
             <div className="flex flex-wrap gap-3 text-sm text-[color:var(--text-muted)]">
               <span className="tag">{profile.location}</span>
               <span className="tag">Remote-friendly</span>
               <span className="tag">Product & platform delivery</span>
             </div>
+
             <div className="mt-4 flex flex-wrap gap-3">
               <a className="button button-primary" href={socialLinks[0].href}>
                 Email Michael
@@ -68,6 +91,7 @@ export default function Home() {
               </a>
             </div>
           </div>
+
           <ThemeToggle />
         </header>
 
@@ -89,30 +113,44 @@ export default function Home() {
           </div>
         </nav>
 
-        <section className="card grid-two">
-          <div className="flex flex-col gap-4">
+        <section className="card grid-two items-start">
+          <div className="flex flex-col gap-5">
             <span className="eyebrow">How I Work</span>
-            <h2 className="text-2xl font-semibold">
+
+            <h2 className="text-2xl font-semibold leading-tight">
               Reliable delivery with quiet craft.
             </h2>
-            <p className="text-sm text-[color:var(--text-muted)]">
+
+            <p className="text-sm text-[color:var(--text-muted)] leading-relaxed">
               I focus on calm execution, strong documentation, and clean handoffs.
-              Every feature is built with the next maintainer in mind. 
-              <br />I work across the stack and across teams, bridging build systems, test strategy, and 
-              delivery so regulated environments can ship with confidence.
+              Every feature is built with the next maintainer in mind.
+              <br /><br />
+              I work across the stack and across teams, bridging build systems,
+              test strategy, and delivery so regulated environments can ship with confidence.
             </p>
-            <p>For regulated or high-stakes teams, I treat documentation, test governance, 
-               and traceability as part of engineering—so the product is not only built, but <strong>defensible</strong>.
-               <br />I build governance-first software where auditability, determinism, and 
-               evidence are part of the engineering—not an afterthought.
+
+            <p className="text-sm leading-relaxed text-[color:var(--text-base)]">
+              For regulated or high-stakes teams, documentation, governance,
+              and traceability are part of engineering — so the product is not only built,
+              but <span className="font-medium">defensible</span>.
+              <br /><br />
+              Governance-first software means auditability, determinism,
+              and evidence are designed in — not added later.
             </p>
           </div>
-          <ul className="flex flex-col gap-3 text-sm text-[color:var(--text-muted)]">
+
+          <ul className="mt-12 flex flex-col gap-4 text-sm text-[color:var(--text-muted)]">
             {summaryPoints.map((point: string) => (
-              <li key={point}>• {point}</li>
+              <li
+                key={point}
+                className="relative pl-5 leading-relaxed before:absolute before:left-0 before:top-[0.45rem] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[color:var(--brand-accent)]"
+              >
+                {point}
+              </li>
             ))}
           </ul>
         </section>
+
 
         <section id="stack" className="section">
           <SectionHeader
