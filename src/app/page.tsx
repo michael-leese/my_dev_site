@@ -124,7 +124,7 @@ export default function Home() {
             <p className="text-sm text-[color:var(--text-muted)] leading-relaxed">
               I focus on calm execution, strong documentation, and clean handoffs.
               Every feature is built with the next maintainer in mind.
-              <br /><br />
+              <br />
               I work across the stack and across teams, bridging build systems,
               test strategy, and delivery so regulated environments can ship with confidence.
             </p>
@@ -133,7 +133,7 @@ export default function Home() {
               For regulated or high-stakes teams, documentation, governance,
               and traceability are part of engineering — so the product is not only built,
               but <span className="font-medium">defensible</span>.
-              <br /><br />
+              <br />
               Governance-first software means auditability, determinism,
               and evidence are designed in — not added later.
             </p>
