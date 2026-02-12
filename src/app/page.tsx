@@ -139,7 +139,7 @@ export default function Home() {
             </p>
           </div>
 
-          <ul className="mt-12 flex flex-col gap-4 text-sm text-[color:var(--text-muted)]">
+          <ul className="mt-12 flex flex-col gap-4 text-sm text-[color:var(--text-muted)] list-disc">
             {summaryPoints.map((point: string) => (
               <li
                 key={point}
