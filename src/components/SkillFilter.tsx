@@ -19,6 +19,8 @@ const FILTERS: SkillFilter[] = [
   "Cloud",
   "Data",
   "Tooling",
+  "AI & Context",
+  "Governance"
 ];
 
 /**

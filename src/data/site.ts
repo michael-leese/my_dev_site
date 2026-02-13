@@ -388,7 +388,7 @@ export const projects: Project[] = [
 ];
 
 /**
- * Skills for the filterable list.
+ * Skills for the filterable list. skillfitler.tsx (category list)
  */
 export const skills: Skill[] = [
   { name: "Next.js 14", category: "Frontend" },
