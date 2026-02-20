@@ -1,0 +1,58 @@
+/* ===== Hero Watermark Overlay ===== */
+
+:root {
+  /* Adjust 0.03 – 0.10 depending on taste */
+  --watermark-opacity: 0.40;
+}
+
+.watermark-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Watermark Layer */
+.watermark-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image: url("/watermark/hero-watermark.png");
+  background-repeat: no-repeat;
+  background-position: 157% -30px;
+  background-size: min(1000px, 60vw) auto;
+
+  opacity: var(--watermark-opacity);
+
+  /* Fade toward text side */
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  filter: blur(0.05px) saturate(0.6);
+}
+
+/* Responsive tuning */
+@media (max-width: 900px) {
+  .watermark-hero::after {
+    background-size: min(800px, 75vw) auto;
+    opacity: calc(var(--watermark-opacity) * 0.85);
+  }
+}
+
+@media (max-width: 640px) {
+  .watermark-hero::after {
+    background-size: min(700px, 90vw) auto;
+    opacity: calc(var(--watermark-opacity) * 0.6);
+  }
+}

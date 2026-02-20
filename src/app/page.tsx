@@ -40,9 +40,9 @@ export default function Home() {
       <main className="container flex flex-col gap-10">
         <header
           id="overview"
-          className="flex flex-wrap items-start justify-between gap-6"
+          className="watermark-hero flex flex-wrap items-start justify-between gap-6"
         >
-          <div className="flex flex-col gap-4">
+          <div className="relative z-10 flex flex-col gap-4">
             <span className="pill w-fit">Available for freelance & contracts</span>
 
             {/* Clean hierarchy: name → role → specialty */}
@@ -91,8 +91,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          <ThemeToggle />
+          <div className="relative z-10">
+            <ThemeToggle />
+          </div>
         </header>
 
         <nav className="sticky top-6 z-10 rounded-full border border-[color:var(--line)] bg-[color:var(--surface)]/90 px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.08)] backdrop-blur">

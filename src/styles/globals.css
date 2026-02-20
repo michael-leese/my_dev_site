@@ -211,6 +211,12 @@
     gap: var(--space-5);
   }
 
+  .hero {
+    position: relative;
+    min-height: 70vh;
+    isolation: isolate;
+  }
+
   @media (max-width: 900px) {
     .grid-two,
     .grid-three {

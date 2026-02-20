@@ -47,3 +47,6 @@ next-env.d.ts
 # Internal docs
 .internal_docs/
 internal_docs/
+
+# design docs
+docs/design/
